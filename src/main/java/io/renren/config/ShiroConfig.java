@@ -44,7 +44,7 @@ public class ShiroConfig {
         ShiroFilterFactoryBean shiroFilter = new ShiroFilterFactoryBean();
         shiroFilter.setSecurityManager(securityManager);
 
-        //拦截器链增加oauth过滤,拦截所有请求，判断请求里是否有token，没有的话直接返回401，并且不继续处理，登录失败则返回错误信息
+        //拦截器链增加oauth过滤,拦截所有请求，判断请求里是否有token，没有的话直接返回401，并且不继续处理，登录失败则返回错误信息，拦截到请求里有token信息，再进入登录验证
         Map<String, Filter> filters = new HashMap<>();
         filters.put("oauth2", new OAuth2Filter());
         shiroFilter.setFilters(filters);
