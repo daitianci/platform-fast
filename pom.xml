@@ -33,6 +33,7 @@
         <commons.codec.version>1.10</commons.codec.version>
         <commons.configuration.version>1.10</commons.configuration.version>
         <httpcore.version>4.4.11</httpcore.version>
+        <joda.time.version>2.9.9</joda.time.version>
     </properties>
 
     <dependencies>
@@ -166,6 +167,13 @@
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore</artifactId>
             <version>${httpcore.version}</version>
+        </dependency>
+
+        <!--joda对datetime的操作类-->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>${joda.time.version}</version>
         </dependency>
     </dependencies>
 
